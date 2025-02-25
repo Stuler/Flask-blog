@@ -10,6 +10,11 @@
             <div class="card">
                 <div class="card-header">
                     <h1>Hello, {% if name %}{{ name }}{% else %}Stranger{% endif %}!</h1>
+                    {% if not known %}
+                        <p>Pleased to meet you!</p>
+                    {% else %}
+                        <p>Happy to see you again!</p>
+                    {% endif %}
                 </div>
                 <div class="card-body">
                     {{ render_form(form) }}
